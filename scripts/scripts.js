@@ -22,6 +22,8 @@ function start(){
             if(time===0){
                 clearInterval(timeInterval)
                 alert('Hora de descansar')
+                time = 300
+                updateTime()
             }
         }, 1000);
         isRunning = true
@@ -40,7 +42,7 @@ function start(){
 function stop(){
     clearInterval(timeInterval)
     time = 300
-    countdown.innerHTML = '5:00'
+    updateTime()
     startTime.innerHTML = 'Iniciar'
 }
 
